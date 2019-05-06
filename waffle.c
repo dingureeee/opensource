@@ -1,23 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
-#define SIZE 1024
 
 int main(void)
 {
-	char want;
+	char want, drinks;
 	int cream[10] = { 0 };
 	int i, cream_choice;
 
 	while (1) {
-		printf("¾î¼­¿À¼¼¿ä~ µù±¸¸® ¿ÍÇÃ°¡°Ô ÀÔ´Ï´Ù ^¤Ñ¤Ñ¤Ñ^\n");
-		printf("¿ÍÇÃÀ» ÁÖ¹®ÇÏ½Ã°Ú½À´Ï´Ù? (y ¶Ç´Â n) ");
+		printf("¿¿¿¿¿~ ¿¿¿ ¿¿¿¿ ¿¿¿ ^¿¿¿^\n");
+		printf("¿¿¿ ¿¿¿¿¿¿¿¿? (y ¿¿ n) ");
 		scanf(" %c", &want);
 
 		if (want == 'y') {
-			printf("------------------------------------------------------------------¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ-\n");
-			printf("  1.µþ±â  2.ÃÊÄÚ  3.¹ÐÅ©  4.¸á·Ð  5.Ã¼¸®  6.¸ðÄ«  7.ÀÚµÎ  8.¸Á°í  9.Ä¡Áî  10.»ç°ú\n");
-			printf("-------------------------------------------------------------------¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ\n");
+			printf("------------------------------------------------------------------¿¿¿¿¿¿¿¿¿-\n");
+			printf("  1.¿¿  2.¿¿  3.¿¿  4.¿¿  5.¿¿  6.¿¿  7.¿¿  8.¿¿  9.¿¿  10.¿¿\n");
+			printf("-------------------------------------------------------------------¿¿¿¿¿¿¿¿¿\n");
 
 			for (i = 0; i < 10; i++) {
 				printf("       %d", cream[i]);
@@ -25,31 +24,64 @@ int main(void)
 			printf("\n");
 
 			while (1) {
-				printf("¹«½¼ ¿ÍÇÃÀ» ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î? (¹øÈ£·Î ÇÑ °³¾¿ ÀÔ·Â)");
+				printf("¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿? (¿¿¿ ¿ ¿¿ ¿¿)");
 				scanf("%d", &cream_choice);
 
 				if (cream_choice >= 1 && cream_choice <= 10) {
 					if (cream[cream_choice - 1] == 0) {
 						cream[cream_choice - 1] = 1;
-						printf("ÁÖ¹®µÇ¾ú½À´Ï´Ù.\n");
+						printf("¿¿¿¿¿¿¿.\n");
+						printf("¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿? (¿¿¿ ¿¿) 1.¿¿¿¿¿ 2.¿¿¿¿ 3.¿¿¿¿ 4.¿¿¿   ");
+						scanf("%d", &drinks);
+						switch (drinks) {
+						case(1):
+							printf("¿¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+							break;
+						case(2):
+							printf("¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+							break;
+						case(3):
+							printf("¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+							break;
+						case(4):
+							printf("¿¿¿¿¿.\n");
+							break;
+						}
 						break;
 					}
 					else {
-						printf("-----µù±¸¸® ¿ÍÇÃ°¡°Ô-----´Ù½Ã ÁÖ¹®ÇØÁÖ¼¼¿ä.-----\n");
+						printf("-----¿¿¿ ¿¿¿¿-----¿¿ ¿¿¿¿¿¿.-----\n");
 						break;
 					}
 				}
 				else {
-					printf("Àß¸øµÈ ÁÖ¹®ÀÔ´Ï´Ù.\n");
+					printf("¿¿¿ ¿¿¿¿¿.\n");
+					printf("¿¿¿ ¿¿¿¿¿¿.\n");
 				}
 			}
 		}
 		else if (want == 'n') {
-			printf("¹æ¹®ÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù. ´ÙÀ½ ¹ø¿¡ ¶Ç ¹æ¹®ÇØÁÖ¼¼¿ä ^¤Ñ¤Ñ^\n");
-			break;
+			printf("¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿? (¿¿¿ ¿¿) 1.¿¿¿¿¿ 2.¿¿¿¿ 3.¿¿¿¿ 4.¿¿¿   ");
+			scanf("%d", &drinks);
+			switch (drinks) {
+			case(1):
+				printf("¿¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+				break;
+			case(2):
+				printf("¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+				break;
+			case(3):
+				printf("¿¿¿¿ ¿¿¿¿¿¿¿.\n");
+				break;
+			case(4):
+				printf("¿¿¿¿¿.\n");
+				break;
+			}
 		}
 		else {
-			printf("y ¶Ç´Â nÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
+			printf("y ¿¿ n¿ ¿¿¿¿¿¿.\n");
 		}
+		printf("¿¿¿¿¿¿ ¿¿¿¿¿. ¿¿ ¿¿ ¿ ¿¿¿¿¿¿ ^¿¿^\n\n\n\n");
+
 	} return 0;
 }
